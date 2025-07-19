@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        color: aliceblue;
+        box-sizing: border-box;
+        
+    }
+    body{
+        background: black;
+    }
+
+    .counter{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 250px auto;
+        font-family: monospace;
+        width: 200px;
+        background: skyblue;
+        border-radius: 10px;
+        padding: 10px 10px;
+        box-shadow: 0px 0px 300px 30px yellow;
+
+        
+    }
+    .btn{
+        background: none;
+        border: none;
+    }
+    .btn,.data{
+        font-size: 50px;
+        font-weight: bold;
+        color: aliceblue;
+    }
+    
+</style>
+<body>
+    <div class="counter">
+        <button onclick="decrease()" class="btn">&#8722;</button>
+        <div class="data" id="data">ADD</div>
+        <button class="btn" onclick=add()>&#43;</button>
+    </div>
+   
+</body>
+ <script>
+    let count =0;
+    function add(){
+        count++;
+        document.getElementById("data").innerHTML=count;
+    }
+   let decrease=()=> {
+    if(count>=1){
+        count--;
+    document.getElementById("data").innerHTML=count;
+    }
+
+   }
+
+</script>
+</html>
